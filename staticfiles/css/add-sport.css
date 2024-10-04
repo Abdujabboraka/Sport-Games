@@ -1,0 +1,224 @@
+/* Style for the entire navigation bar */
+.navigation {
+  background-color: rgb(68, 125, 70);
+  padding: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Unordered list in navigation */
+.navigation .links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* Space between items */
+  position: relative;
+}
+
+/* Style for each list item */
+.navigation .links li {
+  margin-right: 20px;
+}
+
+/* Profile image on the far left */
+.navigation .links li:first-child {
+  order: -1;
+  margin-right: auto;
+}
+
+/* New <li> in the middle of the nav */
+.logo{
+    font-size: 60px;
+    margin:left: 60px;
+    margin-right: 150px;
+    font-family: Jaro, sans-serif;
+    color: white;
+}
+.home {
+  font-size: 70px;
+  margin-right: 60px;
+  font-family: Jaro, sans-serif;
+  font-style: normal;
+  color: white;
+  position: relative;}
+
+/* Style for the anchor links */
+.navigation .links a {
+  text-decoration: none;
+  color: white;
+
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.navigation .links a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* Style for the dropdown select */
+.navigation select {
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navigation select:hover {
+  background-color: #575757;
+}
+
+/* Style for the search input */
+.navigation input[type="search"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.navigation input[type="search"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Style for the profile image */
+.navigation img {
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: transform 0.3s;
+}
+
+.navigation img:hover {
+  transform: scale(1.1);
+}
+
+body {
+    font-family: Arial, sans-serif; /* Font for the page */
+    background-color: #f8f9fa; /* Light background color */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Padding around the body */
+}
+
+.form-container {
+    background-color: #ffffff; /* White background for the form */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 20px; /* Inner padding */
+    max-width: 500px; /* Max width for the form */
+    margin-top: 100px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-bottom: 100px;/* Center the form */
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    color: #007bff; /* Blue color for the heading */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+label {
+    display: block; /* Make label take full width */
+    margin-bottom: 5px; /* Space below label */
+    color: #333; /* Dark color for labels */
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Inner padding */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+button {
+    background-color: #007bff; /* Blue background for button */
+    color: #ffffff; /* White text for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Inner padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 100%; /* Full width for button */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Dropdown container */
+.dropdown {
+    position: relative;         /* Position relative for dropdown positioning */
+    display: inline-block;      /* Inline block for alignment */
+}
+
+/* Button style */
+.dropbtn {
+    background-color: #333;     /* Button background color */
+    color: white;               /* Button text color */
+    padding: 10px 15px;         /* Button padding */
+    border: none;               /* Remove border */
+    border-radius: 5px;        /* Rounded corners */
+    font-size: 16px;            /* Font size */
+    cursor: pointer;            /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+/* Change button background on hover */
+.dropbtn:hover {
+    background-color: #575757;   /* Darker background on hover */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;               /* Hidden by default */
+    position: absolute;          /* Positioning */
+    background-color: #444;     /* Background color */
+    border-radius: 5px;         /* Rounded corners */
+    z-index: 1;                  /* Ensure it appears above other content */
+    min-width: 160px;            /* Minimum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;                /* Text color */
+    padding: 10px 15px;         /* Padding */
+    text-decoration: none;       /* Remove underline */
+    display: block;              /* Block display */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+/* Change color of links on hover */
+.dropdown-content a:hover {
+    background-color: #575757;   /* Darker background on hover */
+}
+
+/* Show the dropdown on button hover */
+.dropdown:hover .dropdown-content {
+    display: block;              /* Show dropdown content */
+}
+
+/* Optional: Add a triangle indicator to the button */
+.dropdown:after {
+    content: '';
+    position: absolute;
+    top: 12px;                  /* Adjust position */
+    right: 15px;                /* Right padding for arrow */
+    border: solid white;        /* Arrow color */
+    border-width: 5px 5px 0 5px; /* Triangle dimensions */
+    transform: rotate(180deg);  /* Rotate arrow */
+    pointer-events: none;       /* Prevent interaction */
+}

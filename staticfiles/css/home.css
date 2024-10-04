@@ -1,0 +1,235 @@
+/* Style for the entire navigation bar */
+.navigation {
+  background-color: rgb(68, 125, 70);
+  padding: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Unordered list in navigation */
+.navigation .links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;  /* Space between items */
+  position: relative;
+}
+
+/* Style for each list item */
+.navigation .links li {
+  margin-right: 20px;
+}
+
+/* Profile image on the far left */
+.navigation .links li:first-child {
+  order: -1;
+  margin-right: auto;
+}
+
+/* New <li> in the middle of the nav */
+.logo{
+    font-size: 60px;
+    margin:left: 60px;
+    margin-right: 150px;
+    font-family: Jaro, sans-serif;
+    color: white;
+}
+.home {
+  font-size: 70px;
+  margin-right: 60px;
+  font-family: Jaro, sans-serif;
+  font-style: normal;
+  color: white;
+  position: relative;}
+
+/* Style for the anchor links */
+.navigation .links a {
+  text-decoration: none;
+  color: white;
+
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+.navigation .links a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+/* Style for the dropdown select */
+.navigation select {
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navigation select:hover {
+  background-color: #575757;
+}
+
+/* Style for the search input */
+.navigation input[type="search"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.navigation input[type="search"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Style for the profile image */
+.navigation img {
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: transform 0.3s;
+}
+
+.navigation img:hover {
+  transform: scale(1.1);
+}
+
+.container {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    padding-top: 20px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: rgb(202, 255, 189);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sport {
+    background-color: rgb(150, 230, 138);
+    border-radius: 23px 0 23px 0;
+    border: 1px solid ;
+    width: 250px;
+    height: 300px;
+    color: rgb(25, 160, 215);
+     margin: 10px;
+    text-align: center;
+    line-height: 0.9;}
+
+.image {
+    border-radius: 23px 0 0 0;
+    width: 100%;
+    height: 65%}
+
+.body {
+    background-color: rgb(202, 255, 189);}
+
+.quote {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(67, 125, 125);
+    }
+
+.author{
+    font-size: 20px;
+    font-style: italic;}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;         /* Position relative for dropdown positioning */
+    display: inline-block;      /* Inline block for alignment */
+}
+
+/* Button style */
+.dropbtn {
+    background-color: #333;     /* Button background color */
+    color: white;               /* Button text color */
+    padding: 10px 15px;         /* Button padding */
+    border: none;               /* Remove border */
+    border-radius: 5px;        /* Rounded corners */
+    font-size: 16px;            /* Font size */
+    cursor: pointer;            /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+/* Change button background on hover */
+.dropbtn:hover {
+    background-color: #575757;   /* Darker background on hover */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;               /* Hidden by default */
+    position: absolute;          /* Positioning */
+    background-color: #444;     /* Background color */
+    border-radius: 5px;         /* Rounded corners */
+    z-index: 1;                  /* Ensure it appears above other content */
+    min-width: 160px;            /* Minimum width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;                /* Text color */
+    padding: 10px 15px;         /* Padding */
+    text-decoration: none;       /* Remove underline */
+    display: block;              /* Block display */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+/* Change color of links on hover */
+.dropdown-content a:hover {
+    background-color: #575757;   /* Darker background on hover */
+}
+
+/* Show the dropdown on button hover */
+.dropdown:hover .dropdown-content {
+    display: block;              /* Show dropdown content */
+}
+
+/* Optional: Add a triangle indicator to the button */
+.dropdown:after {
+    content: '';
+    position: absolute;
+    top: 12px;                  /* Adjust position */
+    right: 15px;                /* Right padding for arrow */
+    border: solid white;        /* Arrow color */
+    border-width: 5px 5px 0 5px; /* Triangle dimensions */
+    transform: rotate(180deg);  /* Rotate arrow */
+    pointer-events: none;       /* Prevent interaction */
+}
+.add{
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to new lines */
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 90px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(67, 125, 125);
+    }
+
+.button{
+    background-color: rgb(0, 255, 31);
+    color: black;
+    padding: 30px 40px;
+    border: 1px solid rgb(255, 255, 255);
+
+    cursor: pointer;
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    }
+    .button:hover {
+        background-color: black;
+        color: rgb(0, 255, 31);
+    }
+    .button:active {
+        color: rgb(4, 163, 23);
+        background-color: rgb(35, 35, 35);
+    }

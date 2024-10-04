@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Sport</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
+</head>
+<body class="body">
+
+<nav class="navigation" >
+    <ul class="links">
+        <li><a class="home" href=" {% url 'homepage' %}">Home</a></li>
+       <p class="logo">SPORT</p>
+            <div class="dropdown">
+    <button class="dropbtn">Categories</button>
+    <div class="dropdown-content">
+        {% for c in categories %}
+            <a href="{% url 'categories' c.id %}">{{ c }}</a>
+        {% endfor %}
+    </div>
+</div>
+
+        <li><input type="search" placeholder="Search Sport!"></li>
+        <li><img src="{% static 'images/profile.jpg' %}" width="60" height="60" ></li>
+    </ul>
+
+</nav>
+
+
+    <p class="quote">"Champions keep playing until they get it right" <span class="author"> Billie Jean King</span></p><br>
+<div class="container">
+        {% for sport in sports %}
+            <div class="sport">
+                <img class="image" src="{{ sport.image.url }}" alt="{{ sport.name }}" >
+                <h2>{{ sport.category }}</h2>
+                <h3>{{ sport.name }}</h3>
+
+            </div>
+        {% endfor %}
+
+</div>
+
+<div class="add" >
+
+    <button class="button" type="button" onclick="location.href='{% url 'add-sport' %}'">Add Sport</button>
+
+    <button class="button" type="button" onclick="location.href='{% url 'add-category' %}'">Add Category</button>
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Sport</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/add-sport.css' %}">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navigation" >
+    <ul class="links">
+        <li><a class="home" href=" {% url 'homepage' %}">Home</a></li>
+       <p class="logo">SPORT</p>
+            <div class="dropdown">
+    <button class="dropbtn">Categories</button>
+    <div class="dropdown-content">
+        {% for c in categories %}
+            <a href="{% url 'categories' c.id %}">{{ c }}</a>
+        {% endfor %}
+    </div>
+</div>
+
+        <li><input type="search" placeholder="Search Sport!"></li>
+        <li><img src="{% static 'images/profile.jpg' %}" width="60" height="60" ></li>
+    </ul>
+
+</nav>
+
+ <div class="form-container">
+        <h2>Add Sport</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
